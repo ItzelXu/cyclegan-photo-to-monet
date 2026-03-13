@@ -8,10 +8,6 @@ An implementation of **CycleGAN** for unpaired image-to-image translation, conve
 
 Five real photographs transformed by the trained CycleGAN generator into Monet impressionist paintings — trained with no paired examples.
 
-| 📷 Input Photograph | 🎨 Monet-esque Output |
-|---|---|
-| ![Input Photo](qualitative_results.png) | *(right column — same image above)* |
-
 <p align="center">
   <img src="qualitative_results.png" alt="Photo to Monet comparison — 5 pairs" width="520"/>
 </p>
