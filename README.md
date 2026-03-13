@@ -4,6 +4,28 @@ An implementation of **CycleGAN** for unpaired image-to-image translation, conve
 
 > Kaggle Competition: *"I'm Something of a Painter Myself"*
 
+## Qualitative Results: Photo to Monet Style Transfer
+
+Five real photographs transformed by the trained CycleGAN generator into Monet impressionist paintings — trained with no paired examples.
+
+| 📷 Input Photograph | 🎨 Monet-esque Output |
+|---|---|
+| ![Input Photo](qualitative_results.png) | *(right column — same image above)* |
+
+<p align="center">
+  <img src="qualitative_results.png" alt="Photo to Monet comparison — 5 pairs" width="520"/>
+</p>
+
+*Each row: left = real input photograph, right = CycleGAN Monet-style output. The model captures Monet's characteristic soft brushwork, warm-to-cool color transitions, and impressionistic texture — applied consistently across landscapes ranging from rocky coastlines to alpine lakes.*
+
+<p align="center">
+  <img src="sample_transfer.png" alt="Aurora borealis photo vs Monet style transfer" width="460"/>
+</p>
+
+*Single-pair detail: Aurora borealis photograph (left) rendered in Monet style (right) — note the sky's swirling brushstroke texture and desaturated blues characteristic of Monet's winter landscapes.*
+
+---
+
 ## Background
 
 Traditional style transfer requires paired training data (photograph A and its Monet equivalent). CycleGAN's breakthrough is that it learns the mapping from **unpaired** datasets — just a collection of photos and a separate collection of Monet paintings, with no correspondence between them.
@@ -122,6 +144,9 @@ pip install torch torchvision matplotlib pillow
 cycleGan/
 ├── README.md
 ├── CHANGELOG.md
+├── qualitative_results.png              ← 5 Photo→Monet comparison pairs (extracted from report)
+├── sample_transfer.png                  ← Single aurora/winter landscape comparison
+├── training_loss.png                    ← Generator & discriminator training curves
 ├── CycleGan.pdf                         ← Full code + architecture documentation
 ├── fast_style_transfer.pdf              ← Background reading: neural style transfer
 ├── painter_myself_competition_notes.docx ← Kaggle competition notes
